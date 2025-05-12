@@ -1,5 +1,3 @@
-
-
 ## GitHub Copilot Agent Mode - Prompt 2:   Architecture Design
 
 **Agent**: Would you like a suggested architecture, database schema, or a breakdown of the next steps for any of these prioritized features?
@@ -22,6 +20,12 @@ Would you like a concrete example of how to integrate Semantic Kernel and Azure 
 
 **Agent**: The architecture has been revised to specify React for the frontend web UI, clarify that only text input will be used (no Azure Vision APIs for now), and retain the Semantic Kernel & AI Orchestration approach as a key feature.
 
+
+**Additional Input**: Asked Agent to simplify the Semantic Kernel portion to make it only two agents to reduce the overhead. In addition, asked Agent to remvove sections that having contents no longer used. 
+
+We need to add some logic that Semantic Kernel will be integrated with FAST API framework for 1. High-Level Architecture
+
+
 Would you like a sample Semantic Kernel agent design, FastAPI backend scaffold, or a suggested database schema next?
 
 
@@ -38,7 +42,32 @@ Would you like a sample Semantic Kernel agent design, FastAPI backend scaffold, 
 - **Authentication**: Use secure password hashing, parameterized queries, and managed identity for DB access. Never hardcode credentials; use Azure Key Vault for secrets and sensitive configuration (endpoints, keys, etc.).
 - **Payment Gateway**: Mock API endpoint for payment processing (no real transactions).
 - **Azure Hosting**: Use Azure Container Apps for backend/frontend deployment. Use Managed Identity for secure resource access.
-- **Azure AI Integration**: Leverage Azure AI services (e.g., Azure OpenAI, Cognitive Search, Language) for product recommendations, chatbot intelligence, or other smart features where appropriate. (Azure Vision APIs are not included in this version.)
+- **Azure AI Integration**: Leverage Azure AI services (e.g., Azure OpenAI, Cognitive Search) for product recommendations, chatbot intelligence, or other smart features where appropriate. 
+- **Semantic Kernel Orchestration**: Integrate Semantic Kernel with the FastAPI backend to coordinate AI skills and agents. Semantic Kernel will be invoked from FastAPI endpoints to enable advanced conversational flows, product recommendations, and personalized offers through modular orchestration of Azure AI services.
+
+### Integration of Semantic Kernel Agents with FastAPI
+
+The integration of Semantic Kernel agents with FastAPI is central to enabling advanced conversational and AI-driven features in the Shopping Assistant. Here’s how the integration works:
+
+- **Agent Implementation**: Three main agents are implemented as Python classes or modules:
+  - **Shopping Cart Management Agent**: Handles all cart-related actions, such as adding, removing, and updating items in the cart, as well as managing the current cart state for the user.
+  - **Order Management Agent**: Manages order placement, order confirmation, payment processing (mock), and order tracking. This agent is responsible for finalizing the cart into an order and handling post-order actions.
+  - **Personalization Agent**: Provides product recommendations and personalized offers to users based on their preferences, history, and context.
+  These agents encapsulate business logic and orchestrate calls to Azure OpenAI, Cognitive Search, and other AI services via Semantic Kernel.
+
+- **FastAPI Endpoints**: FastAPI endpoints (routes) are defined for user actions such as chat, cart updates, order placement, and offers. When a request is received, the endpoint invokes the appropriate agent, passing user input and context.
+
+- **Semantic Kernel Orchestration**: Within each agent, Semantic Kernel is used to coordinate AI skills—such as intent recognition, product recommendation, or personalized offers—by composing prompts and managing responses from Azure AI services.
+
+- **Response Flow**: The agent processes the AI responses, applies business rules, and returns a structured result to the FastAPI endpoint, which then sends the response to the frontend (e.g., chatbot UI).
+
+**Example Flow:**
+1. User sends a chat message: “Add two bags of coffee to my cart.”
+2. FastAPI chat endpoint receives the message and calls the Shopping Cart Management Agent.
+3. The agent uses Semantic Kernel to interpret the intent and update the cart in the database.
+4. The agent returns a confirmation message, which the endpoint sends back to the frontend.
+
+This modular approach keeps business logic, AI orchestration, and HTTP handling cleanly separated, making the system maintainable and extensible.
 
 ### 2. Security & Best Practices
 - Use parameterized queries and proper indexing in PostgreSQL.
@@ -67,7 +96,8 @@ Would you like a sample Semantic Kernel agent design, FastAPI backend scaffold, 
 4. Build frontend with chatbot UI and connect to backend.
 5. Implement mock payment API.
 6. Integrate Azure AI services where appropriate.
-7. Add logging, error handling, and security controls.
+7. Integrate Semantic Kernel with FastAPI backend to enable agent-based orchestration of AI skills (recommendations, order management, personalization).
+8. Add logging, error handling, and security controls.
 
 ---
 
@@ -83,33 +113,25 @@ To make the Shopping Assistant more intelligent and adaptive, you can integrate 
 - Power semantic product search and ranking using vector search and semantic capabilities.
 - Index product catalog and enable users to search using natural language queries.
 
-### 3. Azure AI Language Services
-- Extract key information from user chats (e.g., order intent, preferences) using entity recognition and sentiment analysis.
-- Summarize chat history or product reviews for users.
+### 3. Semantic Kernel & AI Orchestration
+- Use Semantic Kernel to coordinate multiple AI skills and services (e.g., OpenAI, Search).
+- Build three main agents for clarity and maintainability:
+  - **Shopping Cart Management Agent**: Handles all cart-related actions, such as adding, removing, and updating items in the cart, as well as managing the current cart state for the user.
+  - **Order Management Agent**: Manages order placement, order confirmation, payment processing (mock), and order tracking. This agent is responsible for finalizing the cart into an order and handling post-order actions.
+  - **Personalization Agent**: Provides product recommendations and personalized offers to users based on their preferences, history, and context.
+- Agents collaborate to fulfill complex user requests, improving flexibility and user experience while minimizing overhead.
 
-### 4. Azure AI Vision Services
-- (Not included in this version; text input only for chat and search.)
-
-### 5. Semantic Kernel & AI Orchestration
-- Use Semantic Kernel to coordinate multiple AI skills and services (e.g., OpenAI, Search, Language, Vision).
-- Build custom agents for:
-  - Product Recommendation Agent (personalized suggestions)
-  - Order Placement Agent (interprets chat, confirms orders)
-  - Shopping Cart Agent (manages cart via chat)
-  - Offer/Promotion Agent (finds and applies best deals)
-- Agents can collaborate to fulfill complex user requests, improving flexibility and user experience.
-
-### 6. Azure AI Studio & Prompt Flow
+### 4. Azure AI Studio & Prompt Flow
 - Use Azure AI Studio to design, test, and deploy prompt flows for advanced conversational experiences.
 
-### 7. Responsible AI & Security
+### 5. Responsible AI & Security
 - Use content moderation, logging, and monitoring to ensure safe and responsible AI usage.
 - Store all AI endpoints, keys, and configs in Azure Key Vault.
 
 ---
 
 **Summary:**
-By integrating Azure OpenAI, Cognitive Search, Language, and orchestrating them with Semantic Kernel and custom agents, your Shopping Assistant can deliver advanced, context-aware, and highly personalized shopping experiences. This approach is modular and future-proof, allowing you to add or update AI skills as needed.
+By integrating Azure OpenAI, Cognitive Search, and orchestrating them with Semantic Kernel and custom agents, your Shopping Assistant delivers advanced, context-aware, and highly personalized shopping experiences. This modular approach is future-proof, allowing you to add or update AI skills as needed.
 
 ---
 
