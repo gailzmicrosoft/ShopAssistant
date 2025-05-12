@@ -1,3 +1,7 @@
+
+
+## GitHub Copilot Agent Mode - Prompt 2:   Architecture Design
+
 **Agent**: Would you like a suggested architecture, database schema, or a breakdown of the next steps for any of these prioritized features?
 
 **Prompt**: Yes, I need to add that I'd like to use Azure PostgreSQL DB as data layer, use Azure Key Vault to store sensitive information such as End Points, Keys, etc. I'd like to use Python as application programming language, and use FastAPI framework for the API App. I'd like to use Azure AI technology where appropriate.
