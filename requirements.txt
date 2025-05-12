@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+passlib[bcrypt]
+python-dotenv
+azure-identity
+azure-keyvault-secrets
+azure-ai-ml
+requests
