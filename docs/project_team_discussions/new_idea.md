@@ -1,0 +1,1 @@
+How about this using Cosmos DB instead of PostgreSQL DB? 
