@@ -1,4 +1,4 @@
-# Shop Assistant - GitHub Copilot Agent Experiment
+# Shopping Assistant - GitHub Copilot Agent Experiment
 This is an experiment project to test the capabilities of GitHub Copilot Agent.
 
 I am trying to see how much I can get out of the **GitHub Copilot Agent mode.** I'd like to document the prompt process, **from an initial big idea, to architecture design, to scaffolding code, and then to completed code modules and eventually, an working application with testing code.** This process will take some trial and error and prompts refinement. I hope to be surprised and satisfied in the end. If this process works, we could use it for our future Projects. 
