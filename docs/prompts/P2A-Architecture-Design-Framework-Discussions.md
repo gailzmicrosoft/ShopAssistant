@@ -4,13 +4,13 @@
 
 **Agent** : Great insight! You’re correct: FastAPI’s routes are static and explicit (one route per endpoint), while Semantic Kernel (SK) enables dynamic, intent-driven “routing” based on user input and context. Here’s how you can combine their strengths for a more natural, flexible architecture:
 
-The Agent updated all the scaffolding code....
+The Agent generated updated architecture ideas... 
 
 **Agent**: **Would you like a sample FastAPI + SK integration code snippet or a more detailed architectural diagram for this pattern?**
 
-**Prompt Response**: I do not need a diagram. I'd like you to update the scaffolding code for this app based on the new architecture idea which I documented in P2A-Architecture-Design-Framwork-Discussions.md
+**Prompt Response**: I do not need a diagram. I'd like you to update the scaffolding code for this app based on the new architecture idea which I documented in P2A-Architecture-Design-Framework-Discussions.md
 
-
+The Agent updated all the scaffolding code....
 
 ------
 
