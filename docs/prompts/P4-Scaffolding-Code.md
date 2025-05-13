@@ -40,7 +40,8 @@ To run your FastAPI app, you will need to install the following packages:
 
 You can install them with:
 
-`pip install fastapi uvicorn sqlalchemy pydantic passlib[bcrypt`
+
+`pip install fastapi uvicorn sqlalchemy pydantic "passlib[bcrypt]"`
 
 Let me know if you want to scaffold the frontend, add more backend features, or need help with anything else!
 

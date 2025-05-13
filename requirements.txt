@@ -1,10 +1,9 @@
-fastapi
-uvicorn
-sqlalchemy
-pydantic
-passlib[bcrypt]
-python-dotenv
-azure-identity
-azure-keyvault-secrets
-azure-ai-ml
-requests
+fastapi==0.115.12
+uvicorn==0.34.2
+sqlalchemy==2.0.40
+pydantic== 2.11.4
+passlib[bcrypt]==1.7.4
+python-dotenv==1.1.0
+azure-identity==1.22.0
+azure-keyvault-secrets=4.9.0
+requests==2.32.3
