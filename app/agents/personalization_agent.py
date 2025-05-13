@@ -2,8 +2,8 @@
 
 class PersonalizationAgent:
     """
-    Provides product recommendations and personalized offers based on user preferences, history, and context.
-    Integrates with Semantic Kernel and Azure AI services.
+    SK Skill: Provides product recommendations and personalized offers.
+    Called by the Semantic Kernel orchestrator based on user intent.
     """
     def __init__(self):
         pass

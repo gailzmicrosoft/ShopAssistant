@@ -2,8 +2,8 @@
 
 class ShoppingCartManagementAgent:
     """
-    Handles all cart-related actions: add, remove, update items, and manage cart state.
-    Integrates with Semantic Kernel for intent recognition and business logic.
+    SK Skill: Handles all cart-related actions (add, remove, update, get cart).
+    Called by the Semantic Kernel orchestrator based on user intent.
     """
     def __init__(self):
         pass

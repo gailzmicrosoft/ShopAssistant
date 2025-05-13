@@ -2,8 +2,8 @@
 
 class OrderManagementAgent:
     """
-    Handles order placement, confirmation, payment (mock), and order tracking.
-    Integrates with Semantic Kernel for intent recognition and business logic.
+    SK Skill: Handles order placement, confirmation, payment, and tracking.
+    Called by the Semantic Kernel orchestrator based on user intent.
     """
     def __init__(self):
         pass

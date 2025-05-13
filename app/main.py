@@ -1,15 +1,19 @@
 from fastapi import FastAPI
-from app.api import cart, order, user, offers, chat
+from app.api import chat
 
 app = FastAPI(title="Shop Assistant API")
 
-# Include routers for each feature
-app.include_router(cart.router, prefix="/cart", tags=["Cart"])
-app.include_router(order.router, prefix="/order", tags=["Order"])
-app.include_router(user.router, prefix="/user", tags=["User"])
-app.include_router(offers.router, prefix="/offers", tags=["Offers"])
+# Main entry point for all user interactions
 app.include_router(chat.router, prefix="/chat", tags=["Chat"])
 
 # Health check endpoint
 define_health = lambda: {"status": "ok"}
 app.get("/health")(define_health)
+
+"""
+Architecture Note:
+- All user messages are sent to /chat/message.
+- FastAPI passes the message to the Semantic Kernel orchestrator.
+- SK classifies intent and routes to the correct agent/skill.
+- This enables flexible, AI-driven routing and minimal API surface.
+"""
