@@ -46,6 +46,10 @@ class Product(Base):
     name = Column(String, index=True)
     description = Column(Text)
     price = Column(Float)
+    list_price = Column(Float, nullable=True)
+    category = Column(String, nullable=True)
+    sub_category = Column(String, nullable=True)
+    brand = Column(String, nullable=True)
     in_stock = Column(Boolean, default=True)
 
 class CartItem(Base):

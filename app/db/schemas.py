@@ -29,6 +29,10 @@ class ProductBase(BaseModel):
     name: str
     description: Optional[str] = None
     price: float
+    list_price: Optional[float] = None
+    category: Optional[str] = None
+    sub_category: Optional[str] = None
+    brand: Optional[str] = None
     in_stock: bool = True
 
 class Product(ProductBase):
