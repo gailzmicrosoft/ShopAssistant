@@ -64,11 +64,11 @@ class CartItem(Base):
 class Order(Base):
     __tablename__ = "orders"
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
+    customer_id = Column(Integer, ForeignKey("customers.id"))
     status = Column(String)
     total = Column(Float)  # Total order amount
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
-    user = relationship("User")
+    customer = relationship("Customer")
     items = relationship("OrderItem", back_populates="order")
 
 class OrderItem(Base):

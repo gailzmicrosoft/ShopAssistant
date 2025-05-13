@@ -59,7 +59,7 @@ class OrderItem(BaseModel):
 
 class Order(BaseModel):
     id: int
-    user_id: int
+    customer_id: int
     status: str
     total: float  # Total order amount
     created_at: datetime.datetime

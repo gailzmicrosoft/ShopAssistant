@@ -33,4 +33,24 @@ def get_product(db: Session, product_id: int):
 def get_products(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Product).offset(skip).limit(limit).all()
 
+# Order CRUD
+
+def get_order(db: Session, order_id: int):
+    return db.query(models.Order).filter(models.Order.id == order_id).first()
+
+def get_orders_by_customer(db: Session, customer_id: int, skip: int = 0, limit: int = 100):
+    return db.query(models.Order).filter(models.Order.customer_id == customer_id).offset(skip).limit(limit).all()
+
+def create_order(db: Session, order: dict):
+    db_order = models.Order(
+        customer_id=order["customer_id"],
+        status=order.get("status", "pending"),
+        total=order["total"],
+        created_at=order.get("created_at")
+    )
+    db.add(db_order)
+    db.commit()
+    db.refresh(db_order)
+    return db_order
+
 # ...additional CRUD for cart, orders, wishlist, chat, etc. to be implemented
