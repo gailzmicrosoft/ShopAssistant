@@ -1,4 +1,8 @@
 # SQLAlchemy models
+# SQLAlchemy models for the database
+# This file contains the SQLAlchemy ORM models for the database tables.
+# These models define the structure of the database and relationships between tables.
+
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, Boolean, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -13,6 +17,25 @@ class User(Base):
     hashed_password = Column(String)
     email = Column(String, unique=True, index=True)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    customer_id = Column(Integer, ForeignKey("customers.id"), nullable=True)
+    customer = relationship("Customer", back_populates="user")
+
+class Customer(Base):
+    __tablename__ = "customers"
+    id = Column(Integer, primary_key=True, index=True)
+    first_name = Column(String, nullable=False)
+    last_name = Column(String, nullable=False)
+    date_of_birth = Column(DateTime)
+    street_address = Column(String)
+    city = Column(String)
+    state = Column(String)
+    postal_code = Column(String)
+    country = Column(String)
+    email = Column(String, unique=True, index=True)
+    phone = Column(String)
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    user = relationship("User", uselist=False, back_populates="customer")
+    # Relationship to orders, wishlist, etc. can be added as needed
 
 class Product(Base):
     __tablename__ = "products"
@@ -36,8 +59,10 @@ class Order(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     status = Column(String)
+    total = Column(Float)  # Total order amount
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
     user = relationship("User")
+    items = relationship("OrderItem", back_populates="order")
 
 class OrderItem(Base):
     __tablename__ = "order_items"
@@ -45,7 +70,8 @@ class OrderItem(Base):
     order_id = Column(Integer, ForeignKey("orders.id"))
     product_id = Column(Integer, ForeignKey("products.id"))
     quantity = Column(Integer)
-    order = relationship("Order")
+    price = Column(Float)  # Price at the time of order
+    order = relationship("Order", back_populates="items")
     product = relationship("Product")
 
 class WishlistItem(Base):
@@ -63,3 +89,4 @@ class ChatHistory(Base):
     message = Column(Text)
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
     user = relationship("User")
+
