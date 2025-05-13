@@ -1,6 +1,6 @@
 ## GitHub Copilot Agent Mode - Prompt 2A:   Architecture Framework Discussions 
 
-**Prompt**: I think the structure of FASTAPI route is a bit rigid while the SK is flexible 'routing' to functions. How do you see these two schemes working together in a more natural way? Maybe the FASTAPI route needs to be focused on user interaction message classifications.
+**Prompt**: I think the structure of FASTAPI route is a bit rigid while the SK is flexible 'routing' to functions. How do you see these two schemes working together in a more natural way? Maybe the FASTAPI route needs to be focused on user interaction messages.
 
 **Agent** : Great insight! You’re correct: FastAPI’s routes are static and explicit (one route per endpoint), while Semantic Kernel (SK) enables dynamic, intent-driven “routing” based on user input and context. Here’s how you can combine their strengths for a more natural, flexible architecture:
 
