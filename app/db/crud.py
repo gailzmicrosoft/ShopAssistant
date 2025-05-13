@@ -11,7 +11,15 @@ def get_user_by_username(db: Session, username: str):
     return db.query(models.User).filter(models.User.username == username).first()
 
 def create_user(db: Session, user: dict):
-    db_user = models.User(**user)
+    db_user = models.User(
+        username=user["username"],
+        email=user["email"],
+        hashed_password=user["hashed_password"],
+        first_name=user.get("first_name"),
+        last_name=user.get("last_name"),
+        date_of_birth=user.get("date_of_birth"),
+        is_active=user.get("is_active", True)
+    )
     db.add(db_user)
     db.commit()
     db.refresh(db_user)

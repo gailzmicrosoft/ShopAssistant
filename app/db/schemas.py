@@ -12,6 +12,9 @@ import datetime
 class UserBase(BaseModel):
     username: str
     email: str
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    date_of_birth: Optional[datetime.datetime] = None
 
 class UserCreate(UserBase):
     password: str

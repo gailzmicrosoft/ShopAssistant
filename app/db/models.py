@@ -16,9 +16,12 @@ class User(Base):
     username = Column(String, unique=True, index=True)
     hashed_password = Column(String)
     email = Column(String, unique=True, index=True)
+    first_name = Column(String, nullable=True)
+    last_name = Column(String, nullable=True)
+    date_of_birth = Column(DateTime, nullable=True)
+    is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
-    customer_id = Column(Integer, ForeignKey("customers.id"), nullable=True)
-    customer = relationship("Customer", back_populates="user")
+    customer = relationship("Customer", back_populates="user", uselist=False)
 
 class Customer(Base):
     __tablename__ = "customers"
