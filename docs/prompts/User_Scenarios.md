@@ -1,8 +1,30 @@
 # User Scenarios for Shopping Assistant
 
+**Prompt**: Create user scenarios 
+
+Agent created initial version. 
+
+**Prompt**: I'd like to request you to update this User_Scenarios.md. We need to design sign in page that also allows a new user to perform registration process, so that we can create a new user in the user database. At this time, a new customer entry is also added to the customer database. If not a new user, the user can do sign in. I'd like the backend app generate token that contains user credentials and a token that is associated with this user, so that additional operations can be performed at subsequent steps such as placing a new order or making inquires about orders and products. See more details in [Security Tokens](Security_Tokens.md). 
+
 This document outlines key user scenarios to illustrate how real users will interact with the Shopping Assistant. These scenarios help guide architecture, feature design, and development priorities.
 
 ---
+
+## Scenario 0: User Registration, Sign-In, and Logout
+**Persona:** Any new or returning user
+- The user visits the Shopping Assistant web app and is presented with a sign-in/registration page.
+- If the user is new, they can register by providing required information (e.g., username, email, password, and profile details).
+- Upon successful registration:
+    - A new user entry is created in the user database.
+    - A corresponding customer entry is created in the customer database.
+    - The user is automatically signed in.
+- If the user is returning, they can sign in with their credentials.
+- Upon successful sign-in (for both new and returning users):
+    - The backend returns a secure authentication token (e.g., JWT) containing user credentials and identity.
+    - This token is used for all subsequent operations (placing orders, making inquiries, etc.), ensuring secure and personalized access.
+- **Logout:**
+    - The user can log out at any time via a logout button or menu option.
+    - Upon logout, the authentication token is invalidated or removed from the client, ending the session and requiring re-authentication for further actions.
 
 ## Scenario 1: New User Browses and Searches for Products
 **Persona:** Alex, a first-time visitor
