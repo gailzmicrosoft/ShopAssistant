@@ -12,20 +12,12 @@ export default function SignInRegister({ onAuth }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    const endpoint = isRegister ? "/user/register" : "/user/login";
-    try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Authentication failed");
-      const data = await res.json();
-      // Assume backend returns { user, token }
-      onAuth(data.user, data.token);
-    } catch (err) {
-      setError(err.message);
-    }
+    // MOCK: Simulate successful login/register without backend
+    setTimeout(() => {
+      const mockUser = { id: 1, username: form.username, email: form.email };
+      const mockToken = "mock-jwt-token";
+      onAuth(mockUser, mockToken);
+    }, 500);
   };
 
   return (

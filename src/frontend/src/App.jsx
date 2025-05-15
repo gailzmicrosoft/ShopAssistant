@@ -23,7 +23,12 @@ export default function App() {
       {!token ? (
         <SignInRegister onAuth={handleAuth} />
       ) : (
-        <ShopAssistant user={user} token={token} onLogout={handleLogout} />
+        <>
+          <div style={{ display: "flex", justifyContent: "flex-end", padding: 8 }}>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+          <ShopAssistant user={user} token={token} onLogout={handleLogout} />
+        </>
       )}
     </div>
   );
