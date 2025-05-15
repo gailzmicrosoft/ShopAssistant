@@ -5,7 +5,7 @@ I am trying to see how much I can get out of the **GitHub Copilot Agent mode.** 
 
 All the prompts and results will be posted to **docs/prompts** folder. 
 
-When the code has been created, I will post the application folder structure with generated code. 
+The generated code is in the folder **src**. The **frontend** subfolder has code for the web interface built with **React**. The subfolder backend has code for the AI application constructed with Python **`FastAPI`**, `Semantic Kernel`, `PostgreSQL DB`, and `Azure AI services`.
 
 You are welcome to work with me on this project by clone this repo and make your branch. I created **docs/project_team_discussions** where you can upload your ideas and your prompts. 
 
