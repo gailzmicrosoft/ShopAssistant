@@ -1,6 +1,6 @@
 The code modernization SA is in published to GitHub. It has a quick deploy capability, with code in infra folder. 
 
-Now I need to make a new version of it, I try to put the new code in a separate folder named infra-avm. The goal is, in the infra-avm folder which will eventually replace the infra folder, create a main.bicep that deploy the solution like current code in infra folder, with a main.waf.bicep that will deploy a waf-aligned version using azure verified modules (BICEP). Mainly it will need to create one Virtual Network to host all the components, with three subnets. Both main.bicep and main.waf.bicep will use same code base in modules folder. Each will have its own parameters set. 
+We need to make a new version of it. For quick experiment, we will put the new code in a separate folder named **infra-avm**. The goal is, in the infra-avm folder which will eventually replace the infra folder, create a main.bicep that deploys the solution similar to current code in infra folder, with a main.waf.bicep that will deploy a waf-aligned version using azure verified modules (BICEP). Mainly it will need to create one Virtual Network to host all the components, with three subnets. Both main.bicep and main.waf.bicep will use same code base in modules folder. Each will have its own parameters set. 
 
 Details illustrated in below table. The Group (module) Name column is to put all code in one BICEP module. 
 
@@ -26,9 +26,9 @@ Details illustrated in below table. The Group (module) Name column is to put all
 | Route Table                       | Networking            | N/A         |
 | Private Endpoints (if needed)     | Networking            | N/A         |
 
-## Copilot Proposed Ideas
+## Addtional Considerations 
 
-### Additional Networking Components
+### Add Networking Components
 - **Network Security Group (NSG):** Protects subnets and controls inbound/outbound traffic. One NSG per subnet is recommended.
 - **Bastion Host:** Provides secure RDP/SSH access to VMs without exposing public IPs.
 - **Route Table:** Custom route tables for advanced routing scenarios (optional, but recommended for segmented networks).
