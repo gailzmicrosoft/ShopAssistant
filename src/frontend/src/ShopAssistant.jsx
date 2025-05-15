@@ -41,7 +41,6 @@ export default function ShopAssistant({ user, token, onLogout }) {
     <div style={{ maxWidth: 600, margin: "2rem auto", padding: 20, border: "1px solid #ccc", borderRadius: 8 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <h2>Shopping Assistant</h2>
-        <button onClick={onLogout}>Logout</button>
       </div>
       <div style={{ minHeight: 200, background: "#f9f9f9", padding: 10, borderRadius: 4, marginBottom: 16 }}>
         {messages.length === 0 && <div style={{ color: "#888" }}>Start chatting with your assistant!</div>}
