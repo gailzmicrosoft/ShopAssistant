@@ -25,6 +25,7 @@ Details illustrated in below table. The Group (module) Name column is to put all
 | Bastion Host                      | Networking            | N/A         |
 | Route Table                       | Networking            | N/A         |
 | Private Endpoints (if needed)     | Networking            | N/A         |
+| Private DNS Zone                  | Networking            | N/A         |
 
 ## Addtional Considerations 
 
@@ -33,6 +34,7 @@ Details illustrated in below table. The Group (module) Name column is to put all
 - **Bastion Host:** Provides secure RDP/SSH access to VMs without exposing public IPs.
 - **Route Table:** Custom route tables for advanced routing scenarios (optional, but recommended for segmented networks).
 - **Private Endpoints:** For secure, private connectivity to PaaS services (Key Vault, Storage, Cosmos DB, etc.), consider adding private endpoints in the relevant subnets.
+- **Private DNS Zone:** Required for name resolution of private endpoints, ensuring resources in your VNet can resolve the private DNS names of Azure PaaS services to their private IP addresses.
 
 ### Subnet Design (Recommended)
 - **Application Subnet:** Hosts App Services, Container Apps, and supporting resources.
