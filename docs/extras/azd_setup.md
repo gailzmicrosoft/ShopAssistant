@@ -90,4 +90,6 @@ azd monitor        # (Optional) Monitor your app and resources
 
 ---
 
-If you need a hands-on walkthrough or have specific questions about azd, just ask!
+This nice guide was created by GitHub Copilot, after a few prompts. 
+
+If you need a hands-on walkthrough or have specific questions about azd, just ask! - GitHub Copilot said. 
