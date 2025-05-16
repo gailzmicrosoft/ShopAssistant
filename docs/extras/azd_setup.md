@@ -31,8 +31,8 @@ https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-az
    - **About templates:**
      - azd templates are pre-built, best-practice solutions for common Azure scenarios (web apps, microservices, serverless, data/AI, full-stack, etc.).
      - You can browse available templates at:
-       - [Official azd template gallery](https://azure.github.io/azure-dev/)
-       - [Microsoft Learn: azd templates](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/templates)
+       - [Azure Developer CLI templates | Microsoft Learn](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-templates?tabs=csharp)
+       - [Awesome Azure Developer CLI - Template Library](https://azure.github.io/awesome-azd/)
      - Choose a template that matches your tech stack and architecture, or select "empty"/"custom" to use your own code and infrastructure.
      - Templates include sample code, infrastructure-as-code (Bicep), and configuration for rapid setup.
    - **Result:**
