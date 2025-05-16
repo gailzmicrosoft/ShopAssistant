@@ -1,13 +1,17 @@
 # Shopping Assistant - GitHub Copilot Agent Experiment
 
 ## Table of Contents
-- [Project Approach](#project-approach)
-- [Tech Stack](#tech-stack)
-- [Solution Architecture](#solution-architecture)
-- [Current Status (Completed Work & To-Do-List)](#current-status-completed-work--to-do-list)
-- [Getting Started](#getting-started)
-- [How to Contribute](#how-to-contribute)
-- [References](#references)
+- [Shopping Assistant - GitHub Copilot Agent Experiment](#shopping-assistant---github-copilot-agent-experiment)
+  - [Table of Contents](#table-of-contents)
+  - [Project Approach](#project-approach)
+  - [Tech Stack](#tech-stack)
+  - [Solution Architecture](#solution-architecture)
+  - [Current Status (Completed Work \& To-Do-List)](#current-status-completed-work--to-do-list)
+      - [1. Completed Tasks with Results Documented:](#1-completed-tasks-with-results-documented)
+      - [2. Pending Tasks (To-Do-List) - Call for Contributors!](#2-pending-tasks-to-do-list---call-for-contributors)
+  - [Setup Guide](#setup-guide)
+  - [How to Contribute](#how-to-contribute)
+  - [References](#references)
 
 ## Project Approach
 
@@ -61,7 +65,7 @@ Below are the list of things to be completed:
 - **Integrate Frontend and Backend**: Modify frontend app to call backend APIs. End-to-end testing. Check database results.
 - **Test Integrated Solution**: New user registration. Signing in. Ask for offers. Ask agent to place an order. Make inquiry about orders placed. Ask return policy for ordered items.
 
-## Getting Started
+## Setup Guide
 
 1. **Clone the repository:**
    ```sh
@@ -69,8 +73,9 @@ Below are the list of things to be completed:
    cd ShopAssistant
    ```
 2. **Set up the backend:**
-   - See [src/backend/README.md](./src/backend/README.md) for Python/FastAPI setup.
+   - See [src/backend/README.md](./src/backend/README.md) for Python/FastAPI setup. 
 3. **Set up the frontend:**
+   
    - See [src/frontend/README.md](./src/frontend/README.md) for React setup.
 4. **Azure Developer CLI (azd):**
    - Follow [docs/extras/azd_setup.md](./docs/extras/azd_setup.md) for Azure deployment and environment management.
@@ -78,15 +83,14 @@ Below are the list of things to be completed:
 ## How to Contribute
 
 - Fork the repository and create your branch.
-- Add your ideas, prompts, or code to the appropriate folder.
+- Add your ideas, prompts to [docs/contribute](./docs/contribute) folder.
 - Submit a pull request when your feature or fix is ready.
-- See [docs/contribute](./docs/contribute) for more details.
 
 You are welcome to work with me on this project! You can find me at [Gail Zhou, PhD | LinkedIn](https://www.linkedin.com/in/gailzhou/).
 
 ## References
 
 - [Software Engineering in the Era of AI](./docs/extras/sw_in_ai_era.md)
-- [azd Setup Guide](./docs/extras/azd_setup.md)
 - [Project Prompts](./docs/prompts/)
+- [User Scenarios](./docs/prompts/User_Scenarios.md)
 
