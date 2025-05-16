@@ -31,3 +31,13 @@ This is a side project beyond my full time job. I will get back to do more on th
 - **PE Code Generation - Frontend**: [Frontend Web App Code Generated and Tested (stubbed backend)](./src/frontend)
 - **Author's Task**: Create this main README.md with Initial Architecture Diagram. I still like this task. But I think this can be done by AI pretty soon. 
 
+#### Next Steps (Works to be done)
+
+Below are the list of things to be completed
+
+- **Database Setup:** Create Azure PostgreSQL DB, create tables 
+- **Backend Code Generation**: Generate code for backend app
+- **Test backend Functions**: Test backend functions via API calls
+- **Integrate Frontend and Backend**: Modify front end app to call backend APIs. 
+- **Test Integrated Solution**: New user registration. Signing in. Ask for offers. Ask agent to place an order. Make inquiry about orders placed. Ask return policy for ordered items. 
+
