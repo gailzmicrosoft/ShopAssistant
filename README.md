@@ -17,17 +17,17 @@ The initial solution architecture is illustrated below. This was the key design 
 
 ## Current Status (Completed Work)
 
-This is a side project beyond my full time work. I will get back to do more on this project when I get some spare time.
+This is a side project beyond my full time job. I will get back to do more on this project when I get some spare time.
 
 #### Completed Tasks with Results Documented: 
 
-- **Prompt Engineering (PE)**: [Capabilities](./docs/prompts/P1-Shopping-Assistant-Capabilities.md)
-- **PE**: [Architecture Framework](./docs/prompts/P2A-Architecture-Design-Framework-Discussions.md)
-- **PE**: [Architecture Design](./docs/prompts/P2A-Architecture-Design-Framework-Discussions.md)
-- **PE**: [User Scenarios](./docs/prompts/User_Scenarios.md)
-- **PE**: [Security Features](./docs/prompts/Security_Tokens.md)
-- **PE**: [Project Folder Structure](./docs/prompts/P3-Project-Code-Structure.md)
-- **PE**: [Scaffolding Code](./docs/prompts/P4-Scaffolding-Code.md)
-- **PE**: [Frontend Web App Code Generated and Tested (stubbed backend)](./src/frontend)
+- **Prompt Engineering (PE) 1**: [Capabilities](./docs/prompts/P1-Shopping-Assistant-Capabilities.md)
+- **PE 2**: [Architecture Design](./docs/prompts/P2-Architecture-Design.md)
+- **PE 2A**: [Architecture Design Discussions](./docs/prompts/P2A-Architecture-Design-Discussions.md)
+- **PE Extra - Features**: [User Scenarios](./docs/prompts/User_Scenarios.md)
+- **PE Extra - Security**: [Security Features](./docs/prompts/Security_Tokens.md)
+- **PE 3**: [Project Folder Structure](./docs/prompts/P3-Project-Code-Structure.md)
+- **PE 4**: [Scaffolding Code](./docs/prompts/P4-Scaffolding-Code.md)
+- **PE Code Generation - Frontend**: [Frontend Web App Code Generated and Tested (stubbed backend)](./src/frontend)
 - **Author's Task**: Create this main README.md with Initial Architecture Diagram. I still like this task. But I think this can be done by AI pretty soon. 
 
