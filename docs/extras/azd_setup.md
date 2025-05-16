@@ -13,7 +13,7 @@
 ## How to Install azd (on Windows)
 Open PowerShell and run:
 ```pwsh
-winget install Microsoft.Azure.DevCLI
+winget install microsoft.azd
 ```
 Or follow the official instructions:  
 https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd
