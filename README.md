@@ -15,11 +15,11 @@ You are welcome to work with me on this project by clone this repo and make your
 
 The initial solution architecture is illustrated below. This was the key design used to create various prompts for GitHub Copilot to complete the tasks. There are many interactions with the GitHub Copilot. ![Solution Architecture](./docs/images/architecture.png)
 
-## Current Status (Completed Work)
+## Current Status (Completed Work & To-Do-List)
 
 This is a side project beyond my full time job. I will get back to do more on this project when I get some spare time.
 
-#### Completed Tasks with Results Documented: 
+#### 1. Completed Tasks with Results Documented: 
 
 - **Prompt Engineering (PE) 1**: [Capabilities](./docs/prompts/P1-Shopping-Assistant-Capabilities.md)
 - **PE 2**: [Architecture Design](./docs/prompts/P2-Architecture-Design.md)
@@ -31,7 +31,7 @@ This is a side project beyond my full time job. I will get back to do more on th
 - **PE Code Generation - Frontend**: [Frontend Web App Code Generated and Tested (stubbed backend)](./src/frontend)
 - **Author's Task**: Create this main README.md with Initial Architecture Diagram. I still like this task. But I think this can be done by AI pretty soon. 
 
-#### Next Steps (Works to be done)
+#### 2. Pending Tasks (To-Do-List) - Call for Contributors! 
 
 Below are the list of things to be completed
 
