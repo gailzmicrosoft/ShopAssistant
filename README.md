@@ -65,7 +65,7 @@ Below are the list of things to be completed:
 - **Integrate Frontend and Backend**: Modify frontend app to call backend APIs. End-to-end testing. Check database results.
 - **Test Integrated Solution**: New user registration. Signing in. Ask for offers. Ask agent to place an order. Make inquiry about orders placed. Ask return policy for ordered items.
 
-## Setup Guide
+## Setup Guide (Work In Progress)
 
 1. **Clone the repository:**
    ```sh
