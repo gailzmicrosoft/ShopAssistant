@@ -23,19 +23,46 @@ https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-az
    ```pwsh
    azd init
    ```
+   - **What it does:**
+     - Prompts you to select a project template (or use your own code/infra).
+     - Sets up an `azd.yaml` file describing your app, services, and infra.
+     - Creates a `.azure/` folder for environment and state management.
+     - Optionally scaffolds sample code and infrastructure (if using a template).
+   - **Result:**
+     - Your project is now azd-enabled, with configuration files for deployment and environment management.
+
 2. **Provision Azure resources**
    ```pwsh
    azd provision
    ```
+   - **What it does:**
+     - Reads your infrastructure-as-code files (e.g., Bicep in `infra/`).
+     - Deploys all required Azure resources (e.g., databases, web apps, key vaults) to your selected environment.
+     - Stores environment-specific outputs (like connection strings) in `.env` files.
+   - **Result:**
+     - All Azure infrastructure for your app is created and ready for use.
+
 3. **Deploy your app**
    ```pwsh
    azd deploy
    ```
+   - **What it does:**
+     - Builds and deploys your application code (frontend, backend, etc.) to the provisioned Azure resources.
+     - Uses the environment settings and outputs from the provision step.
+   - **Result:**
+     - Your app is live and running on Azure, connected to the provisioned resources.
+
 4. **Manage environments**
    ```pwsh
    azd env list
    azd env select <env-name>
+   azd env new <env-name>
    ```
+   - **What it does:**
+     - Lets you create, list, and switch between multiple environments (e.g., dev, test, prod).
+     - Each environment has its own Azure resources and configuration.
+   - **Result:**
+     - You can easily manage separate deployments for different stages or teams, with isolated resources and settings.
 
 ## Example: End-to-End Flow
 ```pwsh
