@@ -14,3 +14,20 @@ You are welcome to work with me on this project by clone this repo and make your
 ## Solution Architecture 
 
 The initial solution architecture is illustrated below. This was the key design used to create various prompts for GitHub Copilot to complete the tasks. There are many interactions with the GitHub Copilot. ![Solution Architecture](./docs/images/architecture.png)
+
+## Current Status (Completed Work)
+
+This is a side project beyond my full time work. I will get back to do more on this project when I get some spare time.
+
+#### Completed Tasks with Results Documented: 
+
+- **Prompt Engineering (PE)**: [Capabilities](./docs/prompts/P1-Shopping-Assistant-Capabilities.md)
+- **PE**: [Architecture Framework](./docs/prompts/P2A-Architecture-Design-Framework-Discussions.md)
+- **PE**: [Architecture Design](./docs/prompts/P2A-Architecture-Design-Framework-Discussions.md)
+- **PE**: [User Scenarios](./docs/prompts/User_Scenarios.md)
+- **PE**: [Security Features](./docs/prompts/Security_Tokens.md)
+- **PE**: [Project Folder Structure](./docs/prompts/P3-Project-Code-Structure.md)
+- **PE**: [Scaffolding Code](./docs/prompts/P4-Scaffolding-Code.md)
+- **PE**: [Frontend Web App Code Generated and Tested (stubbed backend)](./src/frontend)
+- **Author's Task**: Create this main README.md with Initial Architecture Diagram. I still like this task. But I think this can be done by AI pretty soon. 
+
