@@ -28,6 +28,13 @@ https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-az
      - Sets up an `azd.yaml` file describing your app, services, and infra.
      - Creates a `.azure/` folder for environment and state management.
      - Optionally scaffolds sample code and infrastructure (if using a template).
+   - **About templates:**
+     - azd templates are pre-built, best-practice solutions for common Azure scenarios (web apps, microservices, serverless, data/AI, full-stack, etc.).
+     - You can browse available templates at:
+       - [Official azd template gallery](https://azure.github.io/azure-dev/)
+       - [Microsoft Learn: azd templates](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/templates)
+     - Choose a template that matches your tech stack and architecture, or select "empty"/"custom" to use your own code and infrastructure.
+     - Templates include sample code, infrastructure-as-code (Bicep), and configuration for rapid setup.
    - **Result:**
      - Your project is now azd-enabled, with configuration files for deployment and environment management.
 
