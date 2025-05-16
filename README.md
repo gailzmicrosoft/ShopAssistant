@@ -1,19 +1,19 @@
 # Shopping Assistant - GitHub Copilot Agent Experiment
 ## Project Approach 
 
-This is an experiment project to test the capabilities of GitHub Copilot Agent. This is to show case how software development can be done quicker and with less pain with the GitHub Copilot. Refer to [Software Engineering in the Era of AI](./docs/extras/sw_in_ai_era.md) for a glimpse on what will happen in next 5 years, starting today. 
+This is an experiment project to test the capabilities of GitHub Copilot Agent. This is to showcase how software development can be done quicker and with less efforts with the help of GitHub Copilot. Refer to [Software Engineering in the Era of AI](./docs/extras/sw_in_ai_era.md) for a glimpse on what will happen in next 5-10 years, starting today. 
 
-I am trying to see how much I can get out of the **GitHub Copilot Agent mode.** I'd like to document the prompt process, **from an initial big idea, to architecture design, to scaffolding code, and then to completed code modules and eventually, an working application with testing code.** This process will take some trial and error and prompts refinement. I hope to be surprised and satisfied in the end. If this process works, we could use it for our future Projects. 
+I'd like to see how much I can get out of the **GitHub Copilot Agent mode.** I'll document the prompt engineering process, **from an initial big idea, to capabilities, architecture design, to scaffolding code, and then to completed code modules and eventually, an working application.** This process will take some trial and error and prompts refinement. I hope to be surprised and satisfied in the end. If this process works, we could use it for our future Projects. 
 
-All the prompts and results will be posted to **docs/prompts** folder. 
+Most of the initial prompts and results are posted to **docs/prompts** folder. The code generation will be a tedious process. I will try to provide insights after all code has been generated and tested. 
 
-The generated code is in the folder **src**. The **frontend** subfolder has code for the web interface built with **React**. The subfolder backend has code for the AI application constructed with Python **`FastAPI`**, `Semantic Kernel`, `PostgreSQL DB`, and `Azure AI services`.
+The generated code is in the folder **src** of the project root. The **frontend** subfolder has code for the web interface built with **React**. The subfolder **backend** has code for the AI application constructed with Python **`FastAPI`**, `Semantic Kernel`, `PostgreSQL DB`, and `Azure AI services`.
 
-You are welcome to work with me on this project by clone this repo and make your branch. I created **docs/project_team_discussions** where you can upload your ideas and your prompts. 
+You are welcome to work with me on this project by clone this repo and make your branch. I created [docs/contribute](./docs/contribute) folder where you can upload your ideas and your prompts. You can also clone the repo, make a branch, work on a feature, and submit a PR when your code is working. You can find me at [Gail Zhou, PhD | LinkedIn](https://www.linkedin.com/in/gailzhou/). 
 
 ## Solution Architecture 
 
-The initial solution architecture is illustrated below. This was the key design used to create various prompts for GitHub Copilot to complete the tasks. There are many interactions with the GitHub Copilot. ![Solution Architecture](./docs/images/architecture.png)
+The initial solution architecture is illustrated below. This is the key design to create various prompts for GitHub Copilot for code generation. ![Solution Architecture](./docs/images/architecture.png)
 
 ## Current Status (Completed Work & To-Do-List)
 
@@ -33,11 +33,11 @@ This is a side project beyond my full time job. I will get back to do more on th
 
 #### 2. Pending Tasks (To-Do-List) - Call for Contributors! 
 
-Below are the list of things to be completed
+Below are the list of things to be completed:
 
-- **Database Setup:** Create Azure PostgreSQL DB, create tables 
-- **Backend Code Generation**: Generate code for backend app
-- **Test backend Functions**: Test backend functions via API calls
+- **Database Setup:** Create Azure PostgreSQL DB, create tables.
+- **Backend Code Generation**: Generate code for backend app.
+- **Test backend Functions**: Test backend functions via API calls.
 - **Integrate Frontend and Backend**: Modify front end app to call backend APIs. 
 - **Test Integrated Solution**: New user registration. Signing in. Ask for offers. Ask agent to place an order. Make inquiry about orders placed. Ask return policy for ordered items. 
 
