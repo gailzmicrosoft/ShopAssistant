@@ -9,11 +9,11 @@ Most of the initial prompts and results are posted to **docs/prompts** folder. T
 
 The generated code is in the folder **src** of the project root. The **frontend** subfolder has code for the web interface built with **React**. The subfolder **backend** has code for the AI application constructed with Python **`FastAPI`**, `Semantic Kernel`, `PostgreSQL DB`, and `Azure AI services`.
 
-You are welcome to work with me on this project by clone this repo and make your branch. I created [docs/contribute](./docs/contribute) folder where you can upload your ideas and your prompts. You can also clone the repo, make a branch, work on a feature, and submit a PR when your code is working. You can find me at [Gail Zhou, PhD | LinkedIn](https://www.linkedin.com/in/gailzhou/). 
+You are welcome to work with me on this project by clone this repo and make your branch. I created [docs/contribute](./docs/contribute) folder where you can upload your ideas and your prompts. You can also work on a feature, and submit a PR when your code is working. You can find me at [Gail Zhou, PhD | LinkedIn](https://www.linkedin.com/in/gailzhou/). 
 
 ## Solution Architecture 
 
-The initial solution architecture is illustrated below. This is the key design to create various prompts for GitHub Copilot for code generation. ![Solution Architecture](./docs/images/architecture.png)
+The initial solution architecture is illustrated below. This is the key design to create various prompts for GitHub Copilot to generate code.![Solution Architecture](./docs/images/architecture.png)
 
 ## Current Status (Completed Work & To-Do-List)
 
@@ -37,7 +37,7 @@ Below are the list of things to be completed:
 
 - **Database Setup:** Create Azure PostgreSQL DB, create tables.
 - **Backend Code Generation**: Generate code for backend app.
-- **Test backend Functions**: Test backend functions via API calls.
-- **Integrate Frontend and Backend**: Modify front end app to call backend APIs. 
+- **Test Backend Functions**: Test backend functions via API calls.
+- **Integrate Frontend and Backend**: Modify front end app to call backend APIs. End to end testing. Check database results. 
 - **Test Integrated Solution**: New user registration. Signing in. Ask for offers. Ask agent to place an order. Make inquiry about orders placed. Ask return policy for ordered items. 
 
