@@ -10,28 +10,28 @@ If you are new to AVM BICEP implementation, refer to [AVM Bicep Quickstart Guide
 
 Below table illustrates an example deployment design. The Group (module) Name column is to put all code in one BICEP module. 
 
-| Component Name                    | Group (Module) Name   | Subnet      |
-| --------------------------------- | --------------------- | ----------- |
-| Front End App Service             | App Services          | Application |
-| Front End App Service Plan        | App Services          | Application |
-| Application Insights              | Monitoring            | Application |
-| Container Apps Environment        | Container App         | Application |
-| Log Analytics Workspace           | Monitoring            | Application |
-| Frontend Container App            | Container App         | Application |
-| Backend Container App             | Container App         | Application |
-| Managed Identity (Resource Group) | Identity              | Application |
-| AI Hub                            | AI Foundry            | Services    |
-| AI Project                        | AI Foundry            | Services    |
-| AI Services                       | AI Foundry            | Services    |
-| Key Vault                         | Key Vault             | Data        |
-| Cosmos DB                         | Database              | Data        |
-| Storage Account Front End         | Storage               | Data        |
-| Storage Account Back End          | Storage               | Data        |
-| Network Security Group            | Networking            | N/A         |
-| Bastion Host                      | Networking            | N/A         |
-| Route Table                       | Networking            | N/A         |
-| Private Endpoints (if needed)     | Networking            | N/A         |
-| Private DNS Zone                  | Networking            | N/A         |
+| Component Name                    | Group (Module) Name | Subnet      |
+| --------------------------------- | ------------------- | ----------- |
+| Front End App Service             | App Services        | Application |
+| Front End App Service Plan        | App Services        | Application |
+| Application Insights              | Monitoring          | Application |
+| Container Apps Environment        | Container App       | Application |
+| Log Analytics Workspace           | Monitoring          | Application |
+| Frontend Container App            | Container App       | Application |
+| Backend Container App             | Container App       | Application |
+| Managed Identity (Resource Group) | Identity            | Application |
+| AI Hub                            | AI Foundry          | Services    |
+| AI Project                        | AI Foundry          | Services    |
+| AI Services                       | AI Foundry          | Services    |
+| Key Vault                         | Key Vault           | Data        |
+| Cosmos DB                         | Database            | Data        |
+| Storage Account Front End         | Storage             | Data        |
+| Storage Account Back End          | Storage             | Data        |
+| Network Security Group            | Networking          | N/A         |
+| Bastion Host                      | Networking          | N/A         |
+| Route Table                       | Networking          | N/A         |
+| Private Endpoints                 | Networking          | N/A         |
+| Private DNS Zone                  | Networking          | N/A         |
 
 ## Deployment Considerations 
 
