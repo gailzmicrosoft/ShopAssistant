@@ -17,12 +17,13 @@ This folder contains the backend API for the ShopAssistant project, built with F
 2. **Install dependencies**
    - In this `backend` folder, run:
      ```pwsh
-     pip install -r ../../requirements.txt
+     pip install -r requirements.txt
      ```
 
 3. **Set environment variables**
+   
    - Configure your database, Azure, and secret settings in a `.env` file or via environment variables. See `core/config.py` for details.
-
+   
 4. **Create the database tables**
    - Run the SQL in `db/create_tables.sql` against your PostgreSQL database.
 
